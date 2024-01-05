@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <title>Contact</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter%3A200%2C300%2C500%2C600%2C700%2C800"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A200%2C300%2C500%2C600%2C700%2C800"/>
+  <link rel="stylesheet" href="./styles/contact.css"/>
+
+  <script src="https://unpkg.com/gsap@3.9.0/dist/gsap.min.js"></script>
+
+  <script src="./js/contact.js"></script>
+
+</head>
+<body>
+<div class="contact">
+  <div class="header">
+    <div class="auto-group">
+      <img class="logo" src="./assets/logo.png"/>
+      <div class="header-nav">
+        <div class="home-1">HOME</div>
+        <div class="home-2">RESOURCES</div>
+        <div class="home-3">COMMUNITY</div>
+        <div class="home-4">CONTACT</div>
+      </div>
+    </div>
+    <div class="login-sign-up">LOGIN/SIGN UP</div>
+  </div>
+
+  <div class="contact-hero">Get in Touch</div>
+
+  <div class="contact-content-main">
+    <div class="contact-content-bg">
+      <div class="contact-content-holder">
+        <p class="lets-connect">LET’S CONNECT</p>
+        <p class="enquire">
+        Have a question or need assistance? We&#39;re here to help!
+        <br/>
+        
+        <br/>
+        Feel free to reach out, and we&#39;ll get back to you as soon as possible. Your feedback is important to us!
+        </p>
+      </div>
+      <div class="socials">
+        <img class="instagram-icon" src="./assets/instagram-icon.png"/>
+        <img class="linkedin-icon" src="./assets/linkedin-icon.png"/>
+      </div>
+    </div>
+    <div class="contact-form-container">
+      <form id="contactForm" action="form_processing_script.php" method="post">
+        
+        <div class="contact-name-main">
+          <label for="name" class="label-name">Name</label>
+          <input type="text" id="name" name="name" class="contact-name-field" placeholder="Enter your name" required />
+        </div>
+    
+        <div class="contact-phone-main-AGq">
+          <label for="email" class="label-email">Email</label>
+          <input type="email" id="email" name="email" class="contact-phone-field" placeholder="Enter your email" required />
+        </div>
+    
+        <div class="contact-mobile-main">
+          <label for="mobileNumber" class="label-mobile">
+            <span class="label-sub">Mobile Number (Optional)</span>
+          </label>
+          <input type="tel" id="mobileNumber" name="mobileNumber" class="contact-mobile-field" placeholder="Enter your mobile number" />
+        </div>
+    
+        <div class="contact-text-area-container">
+          <label for="message" class="message">Message</label>
+          <textarea id="message" name="message" class="contact-text-area" placeholder="Write your message here" required></textarea>
+        </div>
+    
+        <!-- Privacy Policy Checkbox -->
+        <div class="privacy-policy">
+          <div id="privacy-policy-toggle" class="toggle" onclick="togglePrivacyPolicy()"></div>
+          <label for="privacyPolicyCheckbox" class="read-privacy-policy">
+            <span class="read-privacy-policy-sub-0">
+              I have read and agree to the Privacy Policy.
+            </span>
+          </label>
+        </div>
+    
+        <!-- Arithmetic Question-->
+        <div class="arithmetic-question">
+          <label for="quiz-answer">Answer the question:</label>
+          <span id="question" class="question"></span>
+          <input type="text" id="quiz-answer" name="quiz-answer" required>
+        </div>
+        <button type="button" class="generate-question" onclick="generateQuestion()">Generate Question</button>
+        
+        <!--<button type="submit" class="contact-form-submit" onclick="validateForm()">Submit</button> -->
+
+        <button type="submit" class="contact-form-submit" onclick="validateAndSubmitForm()">Submit</button>
+
+        <!-- 
+        <button type="submit" class="contact-form-submit">Submit</button> -->
+      </form>
+    </div>
+    
+  </div>
+  <div class="footer-container-Seu">
+    <img class="group-43344-Yxq" src="./assets/group-43344-XKF.png"/>
+    <div class="footer-nav-5xm">
+      <div class="about-DJH">ABOUT</div>
+      <div class="about-X45">FAQS</div>
+      <div class="about-2Wd">PRIVACY POLICY </div>
+      <div class="about-uKX">CONTACT</div>
+    </div>
+    <img class="app-store-png-logo-33115-1-CZX" src="./assets/app-store-png-logo-33115-1-kGR.png"/>
+  </div>
+</div>
+</body>
